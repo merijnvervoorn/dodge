@@ -7,8 +7,8 @@
     unicode-range: u+00??, u+0131, u+0152-0153, u+02bb-02bc, u+02c6, u+02da, u+02dc, u+0304, u+0308, u+0329, u+2000-206f, u+20ac, u+2122, u+2191, u+2193, u+2212, u+2215, u+feff, u+fffd;
 }
 body {
-    background-color: #000;
-    color: #7f8692;
+    background-color: #030712;
+    color: #fff;
     font-family: 'Inter', Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -19,9 +19,15 @@ h1 , .h1 {
     letter-spacing: 0.01rem;
 }
 
+.country-notice {
+    text-align: center;
+    padding-top: 5px;
+    font-size: 13px;
+}
+
 .navbar-container {
     width: 75%;
-    padding: 35px 0 10px 0;
+    padding: 10px 0 10px 0;
     margin: 0 12.55%;
     display: flex;
     justify-content: center;
@@ -30,7 +36,7 @@ h1 , .h1 {
 }
 .navbar {
     width: 100%;
-    max-width: 1000px;
+    max-width: 1250px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -55,10 +61,12 @@ h1 , .h1 {
 }
 .navbar .title h2 {
     margin: 0;
+    color: #7f8692;
     font-size: 14px;
 }
 .navbar .title .h2 {
     margin: 0;
+    color: #7f8692;
     font-size: 14px;
 }
 .navbar .menu {
@@ -81,49 +89,21 @@ h1 , .h1 {
 }
 .line {
     width: 75%;
-    max-width: 1000px;
+    max-width: 1250px;
     height: 2px;
     background-color: #1f2937;
     margin: 0 auto;
 }
-.announcement-box {
-    width: 75%;
-    max-width: 1000px;
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #d1d5db;
-    border-radius: 10px;
-}
-
-
-/* spend.html */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-    font-size: 18px;
-    background-color: #000;
-}
-thead {
-    background-color: #000;
-}
-th, td {
-    padding: 12px;
-    border: 1px solid #1f2937;
-    text-align: left;
-}
-
-
-
-/* New CSS for the homepage content */
 
 .content-container {
     width: 75%;
-    max-width: 1000px;
+    max-width: 750px;
     margin: 20px auto;
     padding: 20px;
-    border: 1px solid #d1d5db;
+    border: 2px solid #4b5563;
     border-radius: 10px;
+    color: #fff;
+    background-image: radial-gradient(circle, #030712, #000);
 }
 
 .content-container h1, .content-container h2 {
@@ -141,4 +121,40 @@ th, td {
 
 .link:hover {
     color: #fff;
+}
+
+.content-container .yellow {
+    color: #f8bf3c;
+    font-weight: 700;
+}
+
+
+/* spend.html */
+.title-spend {
+    padding-top: 75px;
+    padding-left: 11%;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+
+table {
+    width: 100%;
+    max-width: 1150px;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    margin-left: auto;
+    margin-right: auto;
+}
+thead {
+    border-top: hidden;
+    color: #7f8692;
+}
+th, td {
+    padding: 15px;
+    border: 1px solid #1f2937;
+    text-align: left;
+    border-left: hidden;
+    border-right: hidden;
 }
