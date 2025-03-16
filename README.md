@@ -25,7 +25,9 @@ DODGE will analyze real Dutch government data to assess:
 - **Comparisons to the U.S. Government** → How do we stack up?  
 
 Our analysis uses **data-driven methods** to determine if Dutch governance is:
+
 ✅ *Super efficiënt* → No need for DODGE 🚀  
+
 ❌ *Hopeloos bureaucratisch* → DODGE is needed! 💸  
 
 ---
