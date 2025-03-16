@@ -1,7 +1,6 @@
 # 🏛️ DODGE: Department of Dutch Government Efficiency
 
-A parody of the Department of Government Efficiency (DOGE), but with Dutch data.
-DODGE: "Because sometimes civil servants can dodge a little too well!" 🏃💨
+Parody of the Department of Government Efficiency (DOGE) page with Dutch data. The project was created to see if Elon has a point with his criticism of the efficiency of the American government. If so, then maybe it is time to create the Department of Dutch Government Efficiency. If not, then maybe we shouldn't take Elon so seriously. 
 
 ---
 
@@ -42,3 +41,7 @@ You can see the current version of the website here: [merijnvervoorn.com/dodge](
 I couldn't have created this without the official website of [DOGE](https://doge.gov), which inspired this project. 
 
 Data from the [Dutch Ministry of Finance](https://www.rijksfinancien.nl) will be used to analyze spending and outcomes.
+
+---
+
+DODGE: "Because sometimes civil servants can dodge a little too well!" 🏃💨
