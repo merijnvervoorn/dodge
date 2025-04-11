@@ -268,6 +268,35 @@ input[type=radio]:checked ~ .option {
   }
 
 
+.final-score-container{
+    width: 75%;
+    max-width: 750px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid #4b5563;
+    border-radius: 10px;
+    color: #fff;
+    background-image: radial-gradient(circle, #030712, #000);
+}
+
+.final-score-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.final-score-content h1, .final-score-content h2 {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.final-score-content p, .final-score-content ul, .final-score-content li {
+    color: #7f8692;
+}
+
+
 @keyframes fadeIn {
     from {opacity: 0;}
     to {opacity:1 ;}

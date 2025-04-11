@@ -403,12 +403,13 @@ function closeEvaluationModal() {
   if (indexNumber < questions.length) {
     nextQuestion(indexNumber);
   } else {
-    handleEndGame();
+    showFinalScore();
   }
 }
 
 // Called when "Next Question" button is clicked.
 function handleNextQuestion() {
+  
   if (!evaluateAnswer()) {
     return;
   }
@@ -436,16 +437,23 @@ function closeOptionModal() {
   document.getElementById('option-modal').style.display = "none";
 }
 
-// End-of-game logic: display final results.
-function handleEndGame() {
-  // Set results in the final modal.
-  document.getElementById('decision-count').innerHTML = decisionCount;
-  document.getElementById('company-value').innerHTML = "$" + companyValuation.toLocaleString();
-  document.getElementById('efficiency-final').innerHTML = efficiency + "%";
-  document.getElementById('profit-final').innerHTML = profit + "%";
-  document.getElementById('public-perception-final').innerHTML = publicPerception + "%";
-  document.getElementById('score-modal').style.display = "flex";
+function showFinalScore() {
+  // Hide the game interface
+  document.querySelector('.game-quiz-container').style.display = 'none';
+
+  // Show the final score container
+  const scoreContainer = document.getElementById('final-score-container');
+  scoreContainer.style.display = 'flex';  // Make it visible
+
+  // Populate the score elements with the actual values
+  document.getElementById('final-decision-count').textContent = decisionCount;  // Use decisionCount for number of processed employees
+  document.getElementById('final-company-value').textContent = "$" + companyValuation.toLocaleString();  // Use companyValuation for final company value
+  document.getElementById('final-efficiency').textContent = efficiency + "%";  // Display efficiency
+  document.getElementById('final-profit').textContent = profit + "%";  // Display profit
+  document.getElementById('final-public-perception').textContent = publicPerception + "%";  // Display public perception
 }
+
+
 
 // Closes the final score modal and resets the game.
 function closeScoreModal() {

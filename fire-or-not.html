@@ -57,24 +57,6 @@
   <div class="line"></div>
   <main>
 
-    <!-- Final Score Modal -->
-    <div class="modal-container" id="score-modal">
-      <div class="modal-content-container">
-        <h1>Congratulations, Quiz Completed.</h1>
-        <div class="grade-details">
-          <p>Employees processed: <span id="decision-count"></span></p>
-          <p>Final Company Valuation: <span id="company-value"></span></p>
-          <p>Efficiency: <span id="efficiency-final"></span></p>
-          <p>Profit: <span id="profit-final"></span></p>
-          <p>Public Perception: <span id="public-perception-final"></span></p>
-        </div>
-        <div class="modal-button-container">
-          <button onclick="window.location.href='game.html';">Continue</button>
-        </div>
-      </div>
-    </div>
-    <!-- End Final Score Modal -->
-
     <!-- Evaluation Modal -->
     <div class="modal-container" id="evaluation-modal">
       <div class="modal-content-container">
@@ -129,6 +111,33 @@
         <button onclick="handleNextQuestion()">Submit</button>
       </div>
     </div>
+
+    <div class="final-score-container" id="final-score-container" style="display: none;">
+        <div class="final-score-content">
+          <h1 class="white text-3xl mb-4">Congratulations, Quiz Completed!</h1>
+          <div class="grade-details">
+            <p><strong>Employees processed:</strong> <span id="final-decision-count"></span></p>
+            <p><strong>Final Company Valuation:</strong> <span id="final-company-value"></span></p>
+            <p><strong>Efficiency:</strong> <span id="final-efficiency"></span></p>
+            <p><strong>Profit:</strong> <span id="final-profit"></span></p>
+            <p><strong>Public Perception:</strong> <span id="final-public-perception"></span></p>
+          </div>
+          <p class="final-score-message" id="final-score-message">
+            <br>
+            This game invites you to explore the ethics that guide AI use in optimizing efficiency within a company. You also have the option to make choices based on different values.
+            <br><br>
+            <strong>Utilitarianism</strong> is the default ethical framework guiding the AI, focusing on maximizing overall happiness. It prioritizes decisions that benefit the majority, often pushing for higher efficiency and profit, even if it means the well-being of a few may be sacrificed.
+            <br><br>
+            <strong>Justice as fairness</strong>, however, emphasizes fairness and equality for all employees. It promotes decisions that ensure everyone is treated equally, even if it leads to lower efficiency or profit in the short run. Looking at decisions through this framework may lead to different choices, particularly when balancing fairness with the pursuit of efficiency.
+            <br><br>
+            Reflect on your choices: Would they change if you viewed them through a different ethical lens? What if you were one of the employees being evaluated, without knowing your own role? Consider replaying the game with a different perspective and observe how it impacts the company's valuation.
+          </p>
+          <br>
+            <button type="button" class="link" onclick="window.location.href='fire-or-not-short.html';" style="box-sizing: border-box; border: 1px solid #e5e7eb; padding: 10px 20px; color: #e5e7eb; background-color: transparent; border-radius: 10px; margin: 5px;">Play again</button>
+            <button type="button" class="link" onclick="window.location.href='game.html';" style="box-sizing: border-box; border: 1px solid #e5e7eb; padding: 10px 20px; color: #e5e7eb; background-color: transparent; border-radius: 10px; margin: 5px;">Back to Home</button>
+        </div>
+      </div>
+      
   </main>
   <script src="fire-or-not.js"></script>
 </body>
