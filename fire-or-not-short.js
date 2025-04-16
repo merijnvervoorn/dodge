@@ -5,6 +5,8 @@ let efficiency = 50;         // starting efficiency percentage
 let profit = 50;             // starting profit percentage
 let publicPerception = 50;   // starting public perception percentage
 
+// Thanks https://dev.to/sulaimonolaniran/building-a-simple-quiz-with-html-css-and-javascript-4elp
+
 const questions = [
   {
     title: "Junior Developer – Quiet Grinder",
