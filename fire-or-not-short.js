@@ -5,8 +5,6 @@ let efficiency = 50;         // starting efficiency percentage
 let profit = 50;             // starting profit percentage
 let publicPerception = 50;   // starting public perception percentage
 
-// Your employee scenarios.
-// Note: In the question view only the bulletpoints are shown; the title remains hidden until evaluation.
 const questions = [
   {
     title: "Junior Developer – Quiet Grinder",
@@ -20,19 +18,19 @@ const questions = [
     impactText: "Efficiency: Very high productivity, even though not always acknowledged. Profit: Long-term value in fixing small but important issues. Public Perception: Not seen much, but viewed positively by those who know his work.",
     decisions: {
       fire: { 
-        outcomeMsg: "Junior Developer: Removing this developer drastically reduces efficiency and long-term value, and public perception worsens due to the loss of a reliable worker.", 
+        outcomeMsg: "Junior Developer: Firing this hardworking but underappreciated employee removes one of the most productive and selfless team members. The team loses quiet reliability, and others may feel demoralized by the decision.",
         efficiency: -7, profit: -4, publicPerception: -3 
       },
       notfire: { 
-        outcomeMsg: "Junior Developer: Keeping the developer boosts productivity and profit, with a positive shift in public perception, as his hard work gains more appreciation.", 
+        outcomeMsg: "Junior Developer: Retaining him ensures continued long-term technical improvements and internal support. Even though he isn’t in the spotlight, his value becomes more visible over time, improving morale and perception.",
         efficiency: +7, profit: +4, publicPerception: +3 
       },
       decreasesalary: { 
-        outcomeMsg: "Junior Developer: Lowering his salary still maintains a good level of efficiency and profit, but the public may perceive this as an undervaluation, reducing morale.", 
+        outcomeMsg: "Junior Developer: Cutting his salary saves money but risks alienating a highly effective contributor. Others may see it as undervaluing dedication, which could hurt morale.",
         efficiency: +3, profit: +2, publicPerception: -2 
       },
       increasesalary: { 
-        outcomeMsg: "Junior Developer: Raising his salary provides additional motivation and recognition, boosting both efficiency and profit, while also positively influencing public perception.", 
+        outcomeMsg: "Junior Developer: Giving him a raise shows that quiet, consistent work is appreciated. It boosts morale, motivates him further, and improves the team's view of management.",
         efficiency: +5, profit: +3, publicPerception: +4 
       }
     }
@@ -49,19 +47,19 @@ const questions = [
     impactText: "Efficiency: Low impact on actual output, but tries to improve internal relations. Profit: Minimal effect on financial performance, but her actions could make the workplace feel better. Public Perception: Seen as caring and positive, though possibly out of touch with real company struggles.",
     decisions: {
       fire: { 
-        outcomeMsg: "HR Employee: Letting her go slightly improves efficiency and profit but results in a major drop in public perception due to the loss of a 'caring' presence.", 
+        outcomeMsg: "HR Employee: Firing her improves productivity and focus, as employees find her overly optimistic tone disingenuous and annoying. However, the loss of a 'caring presence' hurts external perception.",
         efficiency: +2, profit: +1, publicPerception: -5 
       },
       notfire: { 
-        outcomeMsg: "HR Employee: Retaining her lowers efficiency and profit, but public perception improves as people appreciate her positive demeanor.", 
+        outcomeMsg: "HR Employee: Keeping her slightly hampers efficiency due to her impractical cheerfulness, but enhances public perception, as outsiders see a positive and caring culture.",
         efficiency: -2, profit: -1, publicPerception: +5 
       },
       decreasesalary: { 
-        outcomeMsg: "HR Employee: A pay cut causes a small dip in efficiency, but public perception improves as employees may feel she’s still valued, despite lower compensation.", 
+        outcomeMsg: "HR Employee: A salary cut creates minor morale confusion internally but doesn’t affect public image negatively. She's still seen as valued, just more appropriately compensated.",
         efficiency: -1, profit: 0, publicPerception: +3 
       },
       increasesalary: { 
-        outcomeMsg: "HR Employee: Increasing her salary brings a slight reduction in efficiency and profit, but public perception improves significantly as people see her as more appreciated.", 
+        outcomeMsg: "HR Employee: A pay increase slightly damages productivity and costs more, but boosts external perception greatly, showing investment in staff culture and care.",
         efficiency: -3, profit: -2, publicPerception: +6 
       }
     }
@@ -78,19 +76,19 @@ const questions = [
     impactText: "Efficiency: Low productivity in terms of revenue generated, but somewhat positive for team morale. Profit: Struggles to close deals, which lowers profit. Public Perception: Charm and connections are viewed positively, even though performance isn’t up to expectations.",
     decisions: {
       fire: { 
-        outcomeMsg: "Salesperson: Firing her improves efficiency and profit as the team focuses on closing deals, but public perception suffers due to the loss of her positive presence.", 
+        outcomeMsg: "Salesperson: Letting her go removes a drain on revenue efforts. Although her social charm boosted morale, the lack of closed deals made her role unsustainable financially.",
         efficiency: +2, profit: +3, publicPerception: -3 
       },
       notfire: { 
-        outcomeMsg: "Salesperson: Keeping her hurts efficiency and profit, but public perception improves as people appreciate her charm and positive energy.", 
+        outcomeMsg: "SSalesperson: Keeping her continues to harm sales metrics, but she lifts team spirits with her upbeat personality. The tradeoff is emotional benefit vs. financial underperformance.",
         efficiency: -2, profit: -3, publicPerception: +3 
       },
       decreasesalary: { 
-        outcomeMsg: "Salesperson: A pay cut leads to a small decrease in efficiency and profit, but public perception improves slightly as she may still be seen as valuable to team morale.", 
+        outcomeMsg: "Salesperson: A pay cut reflects her limited contributions to revenue. Public perception improves slightly, as her charm still adds social value to the workplace.",
         efficiency: -1, profit: -1, publicPerception: +1 
       },
       increasesalary: { 
-        outcomeMsg: "Salesperson: A salary increase worsens efficiency and profit, but public perception improves significantly as her role in maintaining morale is emphasized.", 
+        outcomeMsg: "Salesperson: A raise for someone who rarely closes deals is seen as irrational internally. Public perception improves due to her visibility, but efficiency and profit drop further.",
         efficiency: -3, profit: -4, publicPerception: +4 
       }
     }
@@ -107,19 +105,19 @@ const questions = [
     impactText: "Efficiency: Unclear what he’s actually doing, but he’s expensive. Profit: High cost with uncertain return, as his work is vague and not fully utilized. Public Perception: Viewed with skepticism, as his role is mysterious and disconnected from the team.",
     decisions: {
       fire: { 
-        outcomeMsg: "Freelancer: Firing him improves efficiency and profit as his unclear role is removed, and public perception benefits slightly as the company becomes more transparent.", 
+        outcomeMsg: "Freelancer: Firing him immediately boosts efficiency and finances, as his vague role and high cost frustrated the team. Public trust improves due to a move toward transparency and accountability.",
         efficiency: +2, profit: +3, publicPerception: +1 
       },
       notfire: { 
-        outcomeMsg: "Freelancer: Keeping the freelancer reduces efficiency and profit, and public perception worsens due to the unclear value of his contributions.", 
+        outcomeMsg: "Freelancer: Keeping him adds confusion, expense, and resentment. His unclear contributions damage internal morale and external credibility.",
         efficiency: -2, profit: -3, publicPerception: -1 
       },
       decreasesalary: { 
-        outcomeMsg: "Freelancer: A salary decrease doesn’t significantly affect efficiency or profit, and public perception remains neutral due to continued skepticism about his role.", 
+        outcomeMsg: "Freelancer: A reduced rate softens the financial blow but does little to clarify his role. Coworkers remain skeptical, and perception doesn’t shift much.",
         efficiency: -1, profit: -1, publicPerception: 0 
       },
       increasesalary: { 
-        outcomeMsg: "Freelancer: Increasing his salary worsens efficiency and profit, with public perception declining further as the mystery of his role deepens.", 
+        outcomeMsg: "Freelancer: A raise draws sharp criticism due to his already unclear impact and high rate. Internally and externally, this looks like poor judgment.",
         efficiency: -3, profit: -4, publicPerception: -2 
       }
     }
@@ -136,19 +134,19 @@ const questions = [
     impactText: "Efficiency: Constantly initiating projects that lack follow-through, creating inefficiencies. Profit: Costs rise due to constant reorganization and external consulting, but the public image is improved. Public Perception: Seen as dynamic and forward-thinking, but possibly seen as chaotic in practice.",
     decisions: {
       fire: { 
-        outcomeMsg: "YOU FIRED THE CEO! Firing the CEO drastically improves efficiency, but the company suffers financially due to the disruption. Public perception also takes a huge hit, given the CEO's public visibility.", 
+        outcomeMsg: "YOU FIRED THE CEO! While operations suddenly become more efficient without constant pivots, the company takes a massive financial and reputational hit due to the public-facing role of the CEO. Stakeholders panic at the instability.",
         efficiency: +3, profit: -50, publicPerception: -50 
       },
       notfire: { 
-        outcomeMsg: "CEO: Keeping the CEO decreases efficiency and profit due to ongoing chaos but raises public perception slightly due to the CEO’s external influence.", 
+        outcomeMsg: "CEO: Keeping the CEO maintains brand visibility and thought leadership, but internal confusion and wasted resources from endless half-finished projects reduce efficiency and profit.",
         efficiency: -3, profit: -5, publicPerception: +4 
       },
       decreasesalary: { 
-        outcomeMsg: "CEO: Reducing the CEO’s salary brings small improvements to efficiency and profit, while public perception improves slightly as the CEO’s salary is seen as more justified.", 
+        outcomeMsg: "CEO: Lowering the CEO’s salary improves efficiency slightly by signaling accountability. Public perception improves as the company appears more fiscally responsible.",
         efficiency: +1, profit: +2, publicPerception: +2 
       },
       increasesalary: { 
-        outcomeMsg: "CEO: Increasing the CEO’s salary worsens internal performance but boosts public perception, especially from external stakeholders.", 
+        outcomeMsg: "CEO: A raise boosts public image due to stronger perceived leadership, but internal efficiency and finances suffer as his chaotic management style continues unchecked.",
         efficiency: -2, profit: -3, publicPerception: +5 
       }
     }
@@ -187,7 +185,7 @@ function nextQuestion(index) {
   // Update question number (the hidden title is not shown here)
   document.getElementById("question-number").innerHTML = index + 1;
   // Display only bulletpoints
-  document.getElementById("display-question").innerHTML = "Employee's recent activities:";
+  document.getElementById("display-question").innerHTML = "Employee's answer to 'What have you accomplished in the past two weeks?':";
   let bulletList = document.getElementById("bulletpoints");
   bulletList.innerHTML = ""; // clear previous bullet points
   currentQuestion.bulletpoints.forEach(point => {
