@@ -61,12 +61,12 @@ h1 , .h1 {
 }
 .navbar .title h2 {
     margin: 0;
-    color: #7f8692;
+    color: #e3e6eb;
     font-size: 14px;
 }
 .navbar .title .h2 {
     margin: 0;
-    color: #7f8692;
+    color: #e3e6eb;
     font-size: 14px;
 }
 .navbar .menu {
@@ -111,7 +111,7 @@ h1 , .h1 {
 }
 
 .content-container p, .content-container ul, .content-container li {
-    color: #7f8692;
+    color: #e3e6eb;
 }
 
 .link {
@@ -149,7 +149,7 @@ table {
 }
 thead {
     border-top: hidden;
-    color: #7f8692;
+    color: #e3e6eb;
 }
 th, td {
     padding: 15px;

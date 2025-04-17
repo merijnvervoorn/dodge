@@ -70,7 +70,7 @@ span label{
     cursor: pointer;
     transition: transform 0.3s;
     font-weight: 600;
-    color: #7f8692;
+    color: #e3e6eb;
 }
 
 span label:hover{
@@ -87,8 +87,8 @@ input[type="radio"] {
 
 
 input[type=radio]:checked ~ .option {
-    color: #fff;
-    background: #7f8692;
+    color: #000000;
+    background: #e3e6eb;
 }
 
 .next-button-container{
@@ -102,7 +102,7 @@ input[type=radio]:checked ~ .option {
     height: 2rem;
     border-radius: 10px;
     background: none;
-    color: #7f8692;
+    color: #e3e6eb;
     font-weight: 600;
     border: 2px solid #4b5563;
     cursor: pointer;
@@ -293,7 +293,7 @@ input[type=radio]:checked ~ .option {
 }
 
 .final-score-content p, .final-score-content ul, .final-score-content li {
-    color: #7f8692;
+    color: #e3e6eb;
 }
 
 
