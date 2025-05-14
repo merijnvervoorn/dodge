@@ -15,6 +15,8 @@ Our goal is to explore whether Dutch government efficiency stands up to scrutiny
 - Should we establish DODGE to ensure optimal performance?  
 - Or should we just stop taking Elon so seriously (assuming we ever did)?  
 
+![Hero Image](https://merijnvervoorn.com/static/projects/dodge-hero-mock.png)
+
 ---
 
 ## 📊 Features & Methodology
